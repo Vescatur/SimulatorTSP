@@ -4,14 +4,15 @@
 public class Manager {
     //VARIABLEN
     //SimulatorManager
-    //Array<ARouteBerekening>
+    //Array<RouteBerekening>
 
     //CONSTRUCTOR
     //voeg simulatorManager toe.
 
     //FUNCTIES
     //LeesXmlOrder(XMLbestand)->SimulatieManager:SetOrder(Order)
-    //getRouteBerekening
+    //getRouteBerekeningArray
+    //getRouteBerekeningEen
     //setAlgoritme(Enum:Algoritme) ->SimulatieManager:setAlgoritme(Algoritme)
 
     //BerekenPauze() -> SimulatieManager:BerekenPauze()

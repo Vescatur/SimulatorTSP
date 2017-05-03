@@ -3,7 +3,6 @@
  */
 public class SimulatorManager {
     //VERIABLEN
-    //Manager
     //Algoritme
     //Array<Order>
 

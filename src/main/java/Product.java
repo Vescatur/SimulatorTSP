@@ -22,6 +22,7 @@ public class Product {
     //return naam;
     //}
 
+    //getLocatie()
 
     //public int getHoogte(){
     //return hoogte;

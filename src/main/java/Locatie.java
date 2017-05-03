@@ -1,0 +1,25 @@
+/**
+ * Created by aaron on 3-5-2017.
+ */
+public class Locatie {
+    //VARIABELEN
+    //private int x;
+    //private int y;
+
+    //CONSTRUCTOR
+    //public Locatie(int x, int y){
+    //this.x = x;
+    //this.y = y;
+    //}
+
+    //FUNCTIES
+    //public void setLocatie(int x, int y){
+    //this.x = x;
+    //this.y = y;
+    //}
+
+    //public int getLocatie(){
+    //return this.x;
+    //return this.y;
+    // };
+}

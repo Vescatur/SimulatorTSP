@@ -3,29 +3,25 @@
  */
 public class Product {
     //VARIABELEN
+    //ID
     //private String naam;
     //private Locatie locatie;
     //private int hoogte;
 
     //CONSTRUCTOR
     //public Product(String naam, Locatie locatie, int hoogte){
+    //ID
     //this.naam = naam;
     //this.locatie = locatie;
     //this.hoogte = hoogte;
     //}
 
     //FUNCTIES
-    //public void setNaam(String naam){
-    //this.naam = naam;
-    //}
 
     //public String getNaam(){
     //return naam;
     //}
 
-    //public void setHoogte(int hoogte){
-    //this.hoogte = hoogte;
-    //}
 
     //public int getHoogte(){
     //return hoogte;

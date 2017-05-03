@@ -13,11 +13,6 @@ public class Locatie {
     //}
 
     //FUNCTIES
-    //public void setLocatie(int x, int y){
-    //this.x = x;
-    //this.y = y;
-    //}
-
     //public int getLocatie(){
     //return this.x;
     //return this.y;

@@ -2,14 +2,14 @@
  * Created by Ivan on 03/05/2017.
  */
 public class SimulatorManager {
-    //variablen
+    //VERIABLEN
     //Manager
     //Algoritme
     //Array<Order>
 
-    //constructor
+    //CONSTRUCTOR
 
-    //functies
+    //FUNCTIES
     //setAlgoritme(Algoritme)
     //setOrder
 

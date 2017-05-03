@@ -3,4 +3,8 @@
  */
 public class Order {
     //Array<Product>
+
+    //CONSTRUCTOR
+
+    //getOrder
 }

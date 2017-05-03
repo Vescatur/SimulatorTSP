@@ -2,14 +2,14 @@
  * Created by Ivan on 03/05/2017.
  */
 public class Manager {
-    //variablen
+    //VARIABLEN
     //SimulatorManager
     //Array<ARouteBerekening>
 
-    //constructor
+    //CONSTRUCTOR
     //voeg simulatorManager toe.
 
-    //functies
+    //FUNCTIES
     //LeesXmlOrder(XMLbestand)->SimulatieManager:SetOrder(Order)
     //getRouteBerekening
     //setAlgoritme(Enum:Algoritme) ->SimulatieManager:setAlgoritme(Algoritme)

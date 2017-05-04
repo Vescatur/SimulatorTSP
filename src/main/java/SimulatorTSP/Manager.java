@@ -40,7 +40,9 @@ public class Manager {
         return routeBerekeningArray.get(index);
     }
 
-    public void setAlgoritme(){ SimulatorManager:setAlgoritme();}
+    public void setAlgoritme(AlgoritmeType algoritmeType){
+        SimulatorManager:algoritmeType = algoritmeType;
+    }
 
     public void BerekenStop(){
         SimulatorManager:BerekenStop();

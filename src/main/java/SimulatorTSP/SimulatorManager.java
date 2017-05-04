@@ -20,12 +20,12 @@ public class SimulatorManager {
     }
 
     //FUNCTIES
-    public Algoritme setAlgoritme(Algoritme algoritme){
-        return null;
+    public void setAlgoritme(Algoritme algoritme){
+        this.algoritme = algoritme;
     }
 
-    public Order setOrder(Order order){
-        return null;
+    public void setOrder(Order order){
+        orderArray.add(order);
     }
 
     public void BerekenStop(){
@@ -33,6 +33,6 @@ public class SimulatorManager {
     }
 
     public void BerekenStart(){
-        //return Array<Routeberekening>
+        //return ArrayList<Routeberekening>
     }
 }

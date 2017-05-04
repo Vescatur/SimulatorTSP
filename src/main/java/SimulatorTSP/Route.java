@@ -1,10 +1,18 @@
 package SimulatorTSP;
 
+import java.util.ArrayList;
+
 /**
  * Created by Ivan on 03/05/2017.
  */
 public class Route {
-    public Route() {
+    private ArrayList<Product> products;
+
+    public Route(ArrayList<Product> products) {
+        this.products = products;
     }
-    //ArrayList<Producten>
+
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
 }

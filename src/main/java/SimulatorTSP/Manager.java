@@ -1,7 +1,9 @@
 package SimulatorTSP;
 
 import SimulatorTSP.Algoritmes.Algoritme;
-
+import java.io.File;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
 import java.util.ArrayList;
 
 /**
@@ -10,9 +12,11 @@ import java.util.ArrayList;
 
 
 public class Manager {
+
     //VARIABLEN
     private SimulatorManager simulatorManager;
     private ArrayList<RouteBerekening> routeBerekeningArray;
+    //File file = new File("some/path");
 
     //CONSTRUCTOR
     public Manager(SimulatorManager simulatorManager){
@@ -21,7 +25,12 @@ public class Manager {
     }
 
     //FUNCTIES
-    public Order LeesXmlOrder(/*file*/){return null;/* data*/}
+    public Order LeesXmlOrder(File file){
+        //DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        //DocumentBuilder db = dbf.newDocumentBuilder();
+        //Document doc = db.parse(file);
+        return null;
+    }
 
     public ArrayList<RouteBerekening> getRouteBerekeningArray(){
         return routeBerekeningArray;
@@ -31,9 +40,7 @@ public class Manager {
         return routeBerekeningArray.get(index);
     }
 
-    public void setAlgoritme(AlgoritmeType algoritme){
-        
-    }
+    public void setAlgoritme(){ SimulatorManager:setAlgoritme();}
 
     public void BerekenStop(){
         SimulatorManager:BerekenStop();

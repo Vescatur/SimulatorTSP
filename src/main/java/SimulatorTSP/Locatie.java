@@ -23,8 +23,14 @@ public class Locatie {
         return y;
     }
 
-    public static int getLengte(Locatie Locatie1,Locatie Locatie2){
-        return 0;
+    public double getLengte(Locatie locatie1){
+        return Locatie.getLengte(locatie1,this);
+    }
+
+    public static double getLengte(Locatie Locatie1,Locatie Locatie2){
+        int xAfstand = Locatie1.getX()-Locatie2.getX();
+        int yAfstand = Locatie1.getY()-Locatie2.getY();
+        return Math.sqrt(Math.pow(xAfstand,2)+Math.pow(yAfstand,2));
     }
 
 }

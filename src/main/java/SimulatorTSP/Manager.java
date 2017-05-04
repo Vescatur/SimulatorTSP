@@ -16,8 +16,6 @@ public class Manager {
 
     //FUNCTIES
     //LeesXmlOrder(XMLbestand)->SimulatieManager:SetOrder(SimulatorTSP.Order)
-    public void LeesXmlOrder
-
     //getRouteBerekeningArray
     //getRouteBerekeningEen
     //setAlgoritme(Enum:SimulatorTSP.SimulatorTSP.Algoritmes) ->SimulatieManager:setAlgoritme(SimulatorTSP.SimulatorTSP.Algoritmes)

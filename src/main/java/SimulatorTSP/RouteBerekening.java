@@ -1,5 +1,7 @@
 package SimulatorTSP;
 
+import SimulatorTSP.Algoritmes.Algoritme;
+
 /**
  * Created by Ivan on 03/05/2017.
  */
@@ -11,10 +13,11 @@ public class RouteBerekening {
 
     //Constructor
 
+
     //FUNCTIES
-    //getOrder
-    //getAlgoritme
-    //getRoute
+    public Order getOrder(){return null;};
+    public Algoritme getAlgoritme(){return null;};
+    public Route getRoute(){return null;};
     //getGegevens() ?Moet uit elkaar worden gehaald
 
 }

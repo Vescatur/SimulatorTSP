@@ -1,5 +1,7 @@
 package SimulatorTSP;
 
+import SimulatorTSP.Algoritmes.Algoritme;
+
 /**
  * Created by Ivan on 03/05/2017.
  */
@@ -12,12 +14,12 @@ public class SimulatorManager {
 
 
     //FUNCTIES
-    //setAlgoritme(SimulatorTSP.SimulatorTSP.Algoritmes)
-    //setOrder
+    public Algoritme setAlgoritme(Algoritme algoritme){return null;};
+    public Order setOrder(Order order){return null;};
 
-    //BerekenPauze
+
     //BerekenStop
-    //BerekenDoorgaan
 
     //BerekenStart()return Array<Routeberekening>
+    
 }

@@ -21,6 +21,8 @@ public class RouteBerekening {
         this.algoritmeType = algoritmeType;
         this.route = route;
         this.berekenTijd = berekenTijd;
+        //this.lengteRoute = ..
+        //this.score = ..
     }
 
     //FUNCTIES

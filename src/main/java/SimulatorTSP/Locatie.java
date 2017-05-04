@@ -5,16 +5,21 @@ package SimulatorTSP;
  */
 public class Locatie {
     //VARIABELEN
-    //private int x;
-    //private int y;
+    private int x;
+    private int y;
 
     //CONSTRUCTOR
-    //public SimulatorTSP.Locatie(int x, int y){
-    //this.x = x;
-    //this.y = y;
-    //}
+    public Locatie(int x, int y){
+    this.x = x;
+    this.y = y;
+    }
 
     //FUNCTIES
-    //getX
-    //getY
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
 }

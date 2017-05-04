@@ -25,14 +25,20 @@ public class SimulatorManager {
     }
 
     public void setOrder(Order order){
-        orderArray.add(order);
+        orderArray = order;
     }
 
     public void BerekenStop(){
 
     }
 
-    public void BerekenStart(){
-        //return ArrayList<Routeberekening>
+    public ArrayList<RouteBerekening> BerekenStart(){
+    //bereik routeberekening via algortime en orderArray
+
+        for(Order order: orderArray){
+            algoritme.BerekenStart(order);
+
+        }
+        return
     }
 }

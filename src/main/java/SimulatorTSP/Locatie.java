@@ -1,5 +1,6 @@
 package SimulatorTSP;
 
+
 /**
  * Created by aaron on 3-5-2017.
  */
@@ -21,4 +22,9 @@ public class Locatie {
     public int getY() {
         return y;
     }
+
+    public static int getLengte(Locatie Locatie1,Locatie Locatie2){
+        return 0;
+    }
+
 }

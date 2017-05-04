@@ -6,18 +6,45 @@ import SimulatorTSP.Algoritmes.Algoritme;
  * Created by Ivan on 03/05/2017.
  */
 public class RouteBerekening {
-    //SimulatorTSP.Order
-    //Enum SimulatorTSP.SimulatorTSP.Algoritmes
-    //SimulatorTSP.Route
-    //Testgegevens zoals (bereken tijd, lengte route,bereken tijd/lengte)
+    private Order order;
+    private AlgoritmeType algoritmeType;
+    private Route route;
+    private double berekenTijd;//seconden
+    private double lengteRoute;//cm
+    private double score;//totale tijd
 
     //Constructor
 
 
-    //FUNCTIES
-    public Order getOrder(){return null;};
-    public Algoritme getAlgoritme(){return null;};
-    public Route getRoute(){return null;};
-    //getGegevens() ?Moet uit elkaar worden gehaald
+    public RouteBerekening(Order order, AlgoritmeType algoritmeType, Route route, double berekenTijd) {
+        this.order = order;
+        this.algoritmeType = algoritmeType;
+        this.route = route;
+        this.berekenTijd = berekenTijd;
+    }
 
+    //FUNCTIES
+    public Order getOrder() {
+        return order;
+    }
+
+    public AlgoritmeType getAlgoritmeType() {
+        return algoritmeType;
+    }
+
+    public Route getRoute() {
+        return route;
+    }
+
+    public double getBerekenTijd() {
+        return berekenTijd;
+    }
+
+    public double getLengteRoute() {
+        return lengteRoute;
+    }
+
+    public double getScore(){
+        return score;
+    }
 }

@@ -8,6 +8,10 @@ import java.util.ArrayList;
 public class Route {
     private ArrayList<Product> products;
 
+    public Route() {
+        this(new ArrayList<Product>());
+    }
+
     public Route(ArrayList<Product> products) {
         this.products = products;
     }

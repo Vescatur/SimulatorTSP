@@ -15,16 +15,25 @@ public class Manager {
     private ArrayList<RouteBerekening> routeBerekeningArray;
 
     //CONSTRUCTOR
-    public Manager(){};
+    public Manager(SimulatorManager simulatorManager){
+        this.simulatorManager = simulatorManager;
+        routeBerekeningArray = new ArrayList<RouteBerekening>();
+    }
 
     //FUNCTIES
     public Order LeesXmlOrder(/*file*/){return null;/* data*/}
 
-    public RouteBerekening getRouteBerekeningArray(){return null;}
+    public ArrayList<RouteBerekening> getRouteBerekeningArray(){
+        return routeBerekeningArray;
+    }
 
-    public RouteBerekening getRouteBerekeningEen(){return null;}
+    public RouteBerekening getRouteBerekeningEen(int index){
+        return routeBerekeningArray.get(index);
+    }
 
-    public void setAlgoritme(Algoritme algoritme){}
+    public void setAlgoritme(AlgoritmeType algoritme){
+        
+    }
 
     public void BerekenStop(){
         SimulatorManager:BerekenStop();

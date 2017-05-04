@@ -10,6 +10,7 @@ public class SimulatorManager {
 
     //CONSTRUCTOR
 
+
     //FUNCTIES
     //setAlgoritme(SimulatorTSP.SimulatorTSP.Algoritmes)
     //setOrder

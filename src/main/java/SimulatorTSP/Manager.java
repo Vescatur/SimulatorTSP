@@ -1,5 +1,9 @@
 package SimulatorTSP;
 
+import SimulatorTSP.Algoritmes.Algoritme;
+
+import java.util.ArrayList;
+
 /**
  * Created by Ivan on 03/05/2017.
  */
@@ -7,27 +11,28 @@ package SimulatorTSP;
 
 public class Manager {
     //VARIABLEN
-
-    //SimulatorTSP.SimulatorManager
-    //Array<SimulatorTSP.RouteBerekening>
+    private SimulatorManager simulatorManager;
+    private ArrayList<RouteBerekening> routeBerekeningArray;
 
     //CONSTRUCTOR
-
+    public Manager(){};
 
     //FUNCTIES
-    //LeesXmlOrder(XMLbestand)->SimulatieManager:SetOrder(SimulatorTSP.Order)
-    //public Order LeesXmlOrder(//file){//return data};
-    //getRouteBerekeningArray
-    //public RouteBerekening getRouteBerekeningArray(){return null;};
-    //getRouteBerekeningEen
-    public RouteBerekening getRouteBerekeningEen(){return null;};
-    //setAlgoritme(Enum:SimulatorTSP.SimulatorTSP.Algoritmes) ->SimulatieManager:setAlgoritme(SimulatorTSP.SimulatorTSP.Algoritmes)
+    public Order LeesXmlOrder(/*file*/){return null;/* data*/}
 
+    public RouteBerekening getRouteBerekeningArray(){return null;}
 
-    //BerekenStop() -> SimulatieManager:BerekenStop()
-    
-    //BerekenStart() -> SimulatieManager:BerekenStart() [returned Array<SimulatorTSP.RouteBerekening>]
+    public RouteBerekening getRouteBerekeningEen(){return null;}
 
+    public void setAlgoritme(Algoritme algoritme){}
+
+    public void BerekenStop(){
+        SimulatorManager:BerekenStop();
+    }
+
+    public void BerekenStart(){
+        SimulatorManager:BerekenStart();
+    }
 
 
 

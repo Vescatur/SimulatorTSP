@@ -1,15 +1,17 @@
+package SimulatorTSP;
+
 /**
  * Created by Ivan on 03/05/2017.
  */
 public class SimulatorManager {
     //VERIABLEN
-    //Algoritme
-    //Array<Order>
+    //SimulatorTSP.SimulatorTSP.Algoritmes
+    //Array<SimulatorTSP.Order>
 
     //CONSTRUCTOR
 
     //FUNCTIES
-    //setAlgoritme(Algoritme)
+    //setAlgoritme(SimulatorTSP.SimulatorTSP.Algoritmes)
     //setOrder
 
     //BerekenPauze

@@ -1,3 +1,5 @@
+package SimulatorTSP;
+
 /**
  * Created by aaron on 3-5-2017.
  */
@@ -7,7 +9,7 @@ public class Locatie {
     //private int y;
 
     //CONSTRUCTOR
-    //public Locatie(int x, int y){
+    //public SimulatorTSP.Locatie(int x, int y){
     //this.x = x;
     //this.y = y;
     //}

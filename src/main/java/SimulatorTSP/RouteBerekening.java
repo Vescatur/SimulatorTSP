@@ -21,7 +21,7 @@ public class RouteBerekening {
         this.algoritmeType = algoritmeType;
         this.route = route;
         this.berekenTijd = berekenTijd;
-        this.lengteRoute = getLengteRoute();
+        this.lengteRoute = 0;//nog uitzoeken
         this.score = (lengteRoute / berekenTijd);
     }
 

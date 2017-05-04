@@ -21,5 +21,5 @@ public class SimulatorManager {
     //BerekenStop
 
     //BerekenStart()return Array<Routeberekening>
-    
+
 }

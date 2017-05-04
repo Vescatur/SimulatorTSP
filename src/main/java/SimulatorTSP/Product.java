@@ -1,33 +1,45 @@
 package SimulatorTSP;
 
+import SimulatorTSP.Algoritmes.Algoritme;
+
 /**
  * Created by Ivan on 03/05/2017.
  */
 public class Product {
     //VARIABELEN
-    //ID
-    //private String naam;
-    //private SimulatorTSP.Locatie locatie;
-    //private int hoogte;
+    private static int idCounter = 0;
+    private int id;
+    private String naam;
+    private Locatie locatie;
+    private int hoogte;
 
     //CONSTRUCTOR
-    //public SimulatorTSP.Product(String naam, SimulatorTSP.Locatie locatie, int hoogte){
-    //ID
-    //this.naam = naam;
-    //this.locatie = locatie;
-    //this.hoogte = hoogte;
-    //}
+    public Product(String naam, Locatie locatie, int hoogte){
+        idCounter++;
+        this.id = idCounter;
+        this.naam = naam;
+        this.locatie = locatie;
+        this.hoogte = hoogte;
+    }
 
     //FUNCTIES
+    public int getId() {
+        return id;
+    }
 
-    //public String getNaam(){
-    //return naam;
-    //}
+    public String getNaam() {
+        return naam;
+    }
 
-    //getLocatie()
+    public Locatie getLocatie() {
+        return locatie;
+    }
 
-    //public int getHoogte(){
-    //return hoogte;
-    //}
+    public int getHoogte() {
+        return hoogte;
+    }
 
+    public void setLocatie(Locatie locatie) {
+        this.locatie = locatie;
+    }
 }

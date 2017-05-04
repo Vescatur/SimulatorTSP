@@ -11,7 +11,15 @@ import java.util.ArrayList;
  */
 public class AlgoritmeGreedy extends Algoritme {
     protected Route BerekenRoute(Order order) {
+        ArrayList<Product> products = (ArrayList<Product>) order.getProducts().clone();
         ArrayList<Product> route = new ArrayList<Product>();
-        return new Route();
+        route.add(order.getProducts().get(1));
+        order.getProducts().remove(1);
+        if(route.size()>1){
+            while(route.size() !=1){
+
+            }
+        }
+        return new Route(route);
     }
 }

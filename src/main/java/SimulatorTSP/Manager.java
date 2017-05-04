@@ -16,13 +16,16 @@ public class Manager {
 
     //FUNCTIES
     //LeesXmlOrder(XMLbestand)->SimulatieManager:SetOrder(SimulatorTSP.Order)
+    public Order LeesXmlOrder(//file){//return data};
     //getRouteBerekeningArray
+    public RouteBerekening getRouteBerekeningArray(){return null;};
     //getRouteBerekeningEen
+    public RouteBerekening getRouteBerekeningEen(){return null;};
     //setAlgoritme(Enum:SimulatorTSP.SimulatorTSP.Algoritmes) ->SimulatieManager:setAlgoritme(SimulatorTSP.SimulatorTSP.Algoritmes)
 
-    //BerekenPauze() -> SimulatieManager:BerekenPauze()
+
     //BerekenStop() -> SimulatieManager:BerekenStop()
-    //BerekenDoorgaan() -> SimulatieManager:BerekenDoorgaan()
+    
     //BerekenStart() -> SimulatieManager:BerekenStart() [returned Array<SimulatorTSP.RouteBerekening>]
 
 

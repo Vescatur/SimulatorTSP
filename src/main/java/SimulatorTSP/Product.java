@@ -23,9 +23,7 @@ public class Product {
     }
 
     //FUNCTIES
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
     public String getNaam() {
         return naam;

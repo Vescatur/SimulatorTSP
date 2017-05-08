@@ -1,12 +1,9 @@
 import SimulatorTSP.Algoritmes.Algoritme;
-import SimulatorTSP.Order;
 import SimulatorTSP.Product;
-import SimulatorTSP.Route;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 /**

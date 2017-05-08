@@ -1,9 +1,6 @@
 package SimulatorTSP.Algoritmes;
 
-import SimulatorTSP.Order;
 import SimulatorTSP.Product;
-import SimulatorTSP.Route;
-import SimulatorTSP.RouteBerekening;
 
 import java.util.ArrayList;
 
@@ -12,18 +9,18 @@ import java.util.ArrayList;
  */
 public abstract class Algoritme {
 
-    protected boolean ControleerOrder(Order order){
-        return order.getProducts().size()!=0;
+    protected boolean ControleerOrder(ArrayList<Product> order){
+        return order.size()!=0;
     }
 
-    public Route BerekenStart(Order order){
+    public ArrayList<Product> BerekenStart(ArrayList<Product> order){
         if(ControleerOrder(order)){
             return BerekenRoute(order);
         }
-        return new Route();
+        return new ArrayList<Product>();
     }
 
-    abstract protected Route BerekenRoute(Order order);
+    abstract protected ArrayList<Product>  BerekenRoute(ArrayList<Product> order);
 
 
 }

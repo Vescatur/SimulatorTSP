@@ -2,13 +2,15 @@ package SimulatorTSP;
 
 import SimulatorTSP.Algoritmes.Algoritme;
 
+import java.util.ArrayList;
+
 /**
  * Created by Ivan on 03/05/2017.
  */
 public class RouteBerekening {
-    private Order order;
+    private ArrayList<Product> order;
     private AlgoritmeType algoritmeType;
-    private Route route;
+    private ArrayList<Product> route;
     private double berekenTijd;//seconden
     private double lengteRoute;//cm
     private double score;//totale tijd
@@ -16,7 +18,7 @@ public class RouteBerekening {
     //Constructor
 
 
-    public RouteBerekening(Order order, AlgoritmeType algoritmeType, Route route, double berekenTijd) {
+    public RouteBerekening(ArrayList<Product> order, AlgoritmeType algoritmeType, ArrayList<Product> route, double berekenTijd) {
         this.order = order;
         this.algoritmeType = algoritmeType;
         this.route = route;
@@ -26,7 +28,7 @@ public class RouteBerekening {
     }
 
     //FUNCTIES
-    public Order getOrder() {
+    public ArrayList<Product> getOrder() {
         return order;
     }
 
@@ -34,7 +36,7 @@ public class RouteBerekening {
         return algoritmeType;
     }
 
-    public Route getRoute() {
+    public ArrayList<Product> getRoute() {
         return route;
     }
 

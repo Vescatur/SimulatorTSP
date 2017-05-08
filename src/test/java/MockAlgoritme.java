@@ -1,8 +1,6 @@
 import SimulatorTSP.Algoritmes.Algoritme;
 import SimulatorTSP.Locatie;
-import SimulatorTSP.Order;
 import SimulatorTSP.Product;
-import SimulatorTSP.Route;
 
 import java.util.ArrayList;
 

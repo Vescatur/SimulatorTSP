@@ -25,7 +25,7 @@ public class Manager {
     }
 
     //FUNCTIES
-    public Order LeesXmlOrder(File file){
+    public ArrayList<Product> LeesXmlOrder(File file){
         //DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         //DocumentBuilder db = dbf.newDocumentBuilder();
         //Document doc = db.parse(file);

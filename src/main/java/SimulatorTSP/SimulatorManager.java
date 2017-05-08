@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class SimulatorManager {
     //VERIABLEN
     private Algoritme algoritme;
-    private ArrayList<Order> orderArray;
+    private ArrayList<ArrayList<Product>> orderArray;
 
     //CONSTRUCTOR
     public SimulatorManager(){
@@ -24,7 +24,7 @@ public class SimulatorManager {
         this.algoritme = algoritme;
     }
 
-    public void setOrder(Order order){
+    public void setOrder(ArrayList<ArrayList<Product>> order){
         orderArray = order;
     }
 
@@ -35,10 +35,10 @@ public class SimulatorManager {
     public ArrayList<RouteBerekening> BerekenStart(){
     //bereik routeberekening via algortime en orderArray
 
-        for(Order order: orderArray){
+        for(ArrayList<Product> order: orderArray){
             algoritme.BerekenStart(order);
 
         }
-        return
+        return new ArrayList<RouteBerekening>();
     }
 }

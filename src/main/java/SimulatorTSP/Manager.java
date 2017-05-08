@@ -41,7 +41,22 @@ public class Manager {
     }
 
     public void setAlgoritme(AlgoritmeType algoritmeType){
-        SimulatorManager:algoritmeType = algoritmeType;
+        switch(algoritmeType){
+            case ZNAV: algoritmeType = algoritmeType;
+            break;
+
+            case GREEDY: algoritmeType = algoritmeType;
+            break;
+
+            case BRUTEFORCE: algoritmeType = algoritmeType;
+            break;
+
+            case RANDOM2OPT: algoritmeType = algoritmeType;
+            break;
+
+        }
+
+
     }
 
     public void berekenStop(){

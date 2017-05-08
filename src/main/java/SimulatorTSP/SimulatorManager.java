@@ -14,6 +14,7 @@ public class SimulatorManager {
     private Algoritme algoritme;
     private AlgoritmeType algoritmeType;
     private ArrayList<ArrayList<Product>> orderArray;
+    private boolean stoppen = false;
 
     //CONSTRUCTOR
     public SimulatorManager(){
@@ -33,21 +34,22 @@ public class SimulatorManager {
         orderArray = order;
     }
 
-    public void BerekenStop(){
-        
+    public void berekenStop(){
+        this.stoppen = false;
     }
 
-    public ArrayList<RouteBerekening> BerekenStart(){
-        ArrayList<RouteBerekening> berekeningen = new ArrayList<RouteBerekening>();
-
-        for(ArrayList<Product> order: orderArray){
-            ArrayList<Product> route = algoritme.BerekenStart(order);
-
-            RouteBerekening berekening = new RouteBerekening(order, getAlgoritmeType(), route, 1);
-
-            berekeningen.add(berekening);
-
-        }
-        return berekeningen;
+    public ArrayList<RouteBerekening> berekenStart(){
+            ArrayList<RouteBerekening> berekeningen = new ArrayList<RouteBerekening>();
+            for (ArrayList<Product> order : orderArray) {
+                if(stoppen){
+                    break;
+                }
+                else {
+                    ArrayList<Product> route = algoritme.BerekenStart(order);
+                    RouteBerekening berekening = new RouteBerekening(order, getAlgoritmeType(), route, 1);
+                    berekeningen.add(berekening);
+                }
+            }
+            return berekeningen;
     }
 }

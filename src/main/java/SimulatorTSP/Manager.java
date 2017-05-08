@@ -44,12 +44,12 @@ public class Manager {
         SimulatorManager:algoritmeType = algoritmeType;
     }
 
-    public void BerekenStop(){
-        SimulatorManager:BerekenStop();
+    public void berekenStop(){
+        SimulatorManager:berekenStop();
     }
 
-    public void BerekenStart(){
-        SimulatorManager:BerekenStart();
+    public void berekenStart(){
+        SimulatorManager:berekenStart();
     }
 
 

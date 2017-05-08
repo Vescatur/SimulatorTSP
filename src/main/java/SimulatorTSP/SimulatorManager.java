@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class SimulatorManager {
     //VERIABLEN
     private Algoritme algoritme;
+    private AlgoritmeType algoritmeType;
     private ArrayList<ArrayList<Product>> orderArray;
 
     //CONSTRUCTOR
@@ -24,21 +25,29 @@ public class SimulatorManager {
         this.algoritme = algoritme;
     }
 
+    public AlgoritmeType getAlgoritmeType(){
+        return algoritmeType;
+    }
+
     public void setOrder(ArrayList<ArrayList<Product>> order){
         orderArray = order;
     }
 
     public void BerekenStop(){
-
+        
     }
 
     public ArrayList<RouteBerekening> BerekenStart(){
-    //bereik routeberekening via algortime en orderArray
+        ArrayList<RouteBerekening> berekeningen = new ArrayList<RouteBerekening>();
 
         for(ArrayList<Product> order: orderArray){
-            algoritme.BerekenStart(order);
+            ArrayList<Product> route = algoritme.BerekenStart(order);
+
+            RouteBerekening berekening = new RouteBerekening(order, getAlgoritmeType(), route, 1);
+
+            berekeningen.add(berekening);
 
         }
-        return new ArrayList<RouteBerekening>();
+        return berekeningen;
     }
 }

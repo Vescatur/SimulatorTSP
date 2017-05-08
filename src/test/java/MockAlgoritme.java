@@ -10,10 +10,10 @@ import java.util.ArrayList;
 public class MockAlgoritme extends Algoritme {
 
 
-    protected Route BerekenRoute(Order order) {
+    protected ArrayList<Product> BerekenRoute(ArrayList<Product> order) {
         Product product = new Product("hey",new Locatie(1,2),2);
         ArrayList<Product> arrayRoute = new ArrayList<Product>();
         arrayRoute.add(product);
-        return new Route(arrayRoute);
+        return arrayRoute;
     }
 }

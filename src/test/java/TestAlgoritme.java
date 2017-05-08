@@ -1,4 +1,5 @@
 import SimulatorTSP.Algoritmes.Algoritme;
+import SimulatorTSP.Locatie;
 import SimulatorTSP.Product;
 import org.junit.Assert;
 import org.junit.Before;
@@ -15,16 +16,30 @@ public class TestAlgoritme {
 
     @Before
     public void Initialize(){
-        algoritme = new MockAlgoritme();
+
     }
 
     @Test
-    public void ControleerOrderEmpty(){
-        Order order = new Order(new ArrayList<Product>());
-        Route route = algoritme.BerekenStart(order);
+    public void ControleerOrder_Empty(){
+        algoritme = new MockAlgoritme();
+        ArrayList<Product> order = new ArrayList<Product>(new ArrayList<Product>());
+        ArrayList<Product> route = algoritme.BerekenStart(order);
 
         double expected = 0;
-        double actual = route.getProducts().size();
+        double actual = route.size();
+        Assert.assertEquals(expected,actual,0.001);
+    }
+
+    @Test
+    public void CloneOrder_VerwijderProducten(){
+        algoritme = new MockDeleteAlgoritme();
+        ArrayList<Product> order = new ArrayList<Product>();
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+        ArrayList<Product> route = algoritme.BerekenStart(order);
+
+        double expected = 2;
+        double actual = order.size();
         Assert.assertEquals(expected,actual,0.001);
     }
 }

@@ -9,17 +9,21 @@ import java.util.ArrayList;
  */
 public class AlgoritmeGreedy extends Algoritme {
     protected ArrayList<Product> BerekenRoute(ArrayList<Product> order) {
-        ArrayList<Product> products = (ArrayList<Product>) order.clone();
         ArrayList<Product> route = new ArrayList<Product>();
 
-        route.add(order.get(1));
-        order.remove(1);
-        if(route.size()>1){
-            while(route.size() !=1){
-
+        route.add(order.get(0));
+        order.remove(0);
+        while(order.size()<=0){
+            if(order.size() == 1){
+                route.add(order.get(0));
+            }else {
+                double bestDistance = order.get(0).getLocatie().getLengte(route.get(route.size()-1).getLocatie());
+                for (int i = 1; i<order.size();i++) {
+                    double newDistance = order.get(0).getLocatie().getLengte(route.get(route.size()-1).getLocatie());
+                }
             }
         }
 
-        return new ArrayList<Product>();
+        return route;
     }
 }

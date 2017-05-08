@@ -33,4 +33,11 @@ public class Locatie {
         return Math.sqrt(Math.pow(xAfstand,2)+Math.pow(yAfstand,2));
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }

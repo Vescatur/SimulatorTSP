@@ -41,7 +41,25 @@ public class Manager {
     }
 
     public void setAlgoritme(AlgoritmeType algoritmeType){
+<<<<<<< HEAD
         //SimulatorManager.algoritmeType = algoritmeType;
+=======
+        switch(algoritmeType){
+            case ZNAV: algoritmeType = algoritmeType;
+            break;
+
+            case GREEDY: algoritmeType = algoritmeType;
+            break;
+
+            case BRUTEFORCE: algoritmeType = algoritmeType;
+            break;
+
+            case RANDOM2OPT: algoritmeType = algoritmeType;
+            break;
+
+        }
+
+>>>>>>> a5ddbab8089bc9b565e87ec19a7238c4cfa90356
 
     }
 

@@ -6,4 +6,5 @@ package SimulatorTSP;
 public class Main {
     //maak simulatorManager
     //Maak manager
+
 }

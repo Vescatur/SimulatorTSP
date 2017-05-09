@@ -35,7 +35,7 @@ public class SimulatorManager {
     }
 
     public void berekenStop(){
-        this.stoppen = false;
+        stoppen = true;
     }
 
     public ArrayList<RouteBerekening> berekenStart(){
@@ -51,5 +51,9 @@ public class SimulatorManager {
                 }
             }
             return berekeningen;
+    }
+
+    public void setAlgoritmeType(AlgoritmeType algoritmeType) {
+        this.algoritmeType = algoritmeType;
     }
 }

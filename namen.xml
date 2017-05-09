@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<producten>
+    <product>
+        <hoogte>6</hoogte>
+        <Xcoord>1</Xcoord>
+        <Ycoord>1</Ycoord>
+    </product>
+    <product>
+        <hoogte>4</hoogte>
+        <Xcoord>1</Xcoord>
+        <Ycoord>1</Ycoord>
+    </product>
+    <product>
+        <hoogte>5</hoogte>
+        <Xcoord>1</Xcoord>
+        <Ycoord>1</Ycoord>
+    </product>
+    <product>
+        <hoogte>6</hoogte>
+        <Xcoord>1</Xcoord>
+        <Ycoord>1</Ycoord>
+    </product>
+</producten>

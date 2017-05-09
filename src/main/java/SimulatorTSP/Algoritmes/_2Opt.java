@@ -16,10 +16,10 @@ public class _2Opt extends Algoritme{
 
         for(Product product:order) {
             route.add(product);
-            while (/*kruising*/) {
-                //route.add(/*zonderkruising*/);
+            //while (/*kruising*/) {
+                                //route.add(/*zonderkruising*/);
                 
-            }
+            //}
             order.remove(product);
         }
         return route;

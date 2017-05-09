@@ -42,4 +42,39 @@ public class TestAlgoritme {
         double actual = order.size();
         Assert.assertEquals(expected,actual,0.001);
     }
+
+    @Test
+    public void CloneOrder_IDcontrolerenProducten1(){
+        algoritme = new MockKopieAlgoritme();
+        ArrayList<Product> order = new ArrayList<Product>();
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+
+        ArrayList<Product> route = algoritme.BerekenStart(order);
+        int[] expected = {order.get(0).getId(),order.get(1).getId(),order.get(2).getId(),order.get(3).getId(),order.get(4).getId(),order.get(5).getId()};
+        int[] actual = {route.get(0).getId(),route.get(1).getId(),route.get(2).getId(),route.get(3).getId(),route.get(4).getId(),route.get(5).getId()};
+        Assert.assertArrayEquals(expected,actual);
+    }
+
+    @Test
+    public void CloneOrder_IDcontrolerenProducten2(){
+        algoritme = new MockKopieAlgoritme();
+        ArrayList<Product> order = new ArrayList<Product>();
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+        order.add(new Product("doos", new Locatie(1,2),1));
+
+        ArrayList<Product> route = algoritme.BerekenStart(order);
+        int[] expected = {order.get(0).getId(),order.get(1).getId(),order.get(2).getId(),order.get(3).getId(),order.get(4).getId(),order.get(5).getId()};
+        int[] actual = {route.get(0).getId(),route.get(1).getId(),route.get(2).getId(),route.get(3).getId(),route.get(4).getId(),route.get(5).getId()};
+        Assert.assertArrayEquals(expected,actual);
+    }
 }
+

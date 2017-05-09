@@ -41,7 +41,8 @@ public class Manager {
     }
 
     public void setAlgoritme(AlgoritmeType algoritmeType){
-        SimulatorManager:algoritmeType = algoritmeType;
+        //SimulatorManager.algoritmeType = algoritmeType;
+
     }
 
     public void berekenStop(){

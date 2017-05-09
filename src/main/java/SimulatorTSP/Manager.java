@@ -1,8 +1,10 @@
 package SimulatorTSP;
 
-import SimulatorTSP.Algoritmes.Algoritme;
+import SimulatorTSP.Algoritmes.*;
+
 import java.io.File;
 import javax.xml.parsers.*;
+
 import org.w3c.dom.*;
 import java.util.ArrayList;
 
@@ -41,26 +43,28 @@ public class Manager {
     }
 
     public void setAlgoritme(AlgoritmeType algoritmeType){
-<<<<<<< HEAD
-        //SimulatorManager.algoritmeType = algoritmeType;
-=======
         switch(algoritmeType){
-            case ZNAV: algoritmeType = algoritmeType;
+            case ZNAV:
+                AlgoritmeZNav algoritmeZNav = new AlgoritmeZNav();
+                simulatorManager.setAlgoritme(algoritmeZNav);
             break;
 
-            case GREEDY: algoritmeType = algoritmeType;
+            case GREEDY:
+                AlgoritmeGreedy algoritmeGreedy = new AlgoritmeGreedy();
+                simulatorManager.setAlgoritme(algoritmeGreedy);
             break;
 
-            case BRUTEFORCE: algoritmeType = algoritmeType;
+            case BRUTEFORCE:
+                AlgoritmeBruteForce algoritmeBruteForce = new AlgoritmeBruteForce();
+                simulatorManager.setAlgoritme(algoritmeBruteForce);
             break;
 
-            case RANDOM2OPT: algoritmeType = algoritmeType;
+            case RANDOM2OPT:
+                AlgoritmeRandom2Opt algoritmeRandom2Opt = new AlgoritmeRandom2Opt();
+                simulatorManager.setAlgoritme(algoritmeRandom2Opt);
             break;
 
         }
-
->>>>>>> a5ddbab8089bc9b565e87ec19a7238c4cfa90356
-
     }
 
     public void berekenStop(){

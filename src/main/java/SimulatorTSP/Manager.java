@@ -18,20 +18,20 @@ public class Manager {
     //VARIABLEN
     private SimulatorManager simulatorManager;
     private ArrayList<RouteBerekening> routeBerekeningArray;
+    private XMLReader xmlReader;
     //File file = new File("some/path");
 
     //CONSTRUCTOR
     public Manager(SimulatorManager simulatorManager){
         this.simulatorManager = simulatorManager;
         routeBerekeningArray = new ArrayList<RouteBerekening>();
+        xmlReader = new XMLReader();
     }
 
     //FUNCTIES
-    public ArrayList<Product> LeesXmlOrder(File file){
-        //DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        //DocumentBuilder db = dbf.newDocumentBuilder();
-        //Document doc = db.parse(file);
-        return null;
+    public void LeesXmlOrder(File file){
+        ArrayList<ArrayList<Product>> orderArray = xmlReader.ReadXmlFile(file);
+        simulatorManager.setOrder(orderArray);
     }
 
     public ArrayList<RouteBerekening> getRouteBerekeningArray(){

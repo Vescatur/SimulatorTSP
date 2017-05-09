@@ -41,6 +41,9 @@ public class Manager {
     }
 
     public void setAlgoritme(AlgoritmeType algoritmeType){
+<<<<<<< HEAD
+        //SimulatorManager.algoritmeType = algoritmeType;
+=======
         switch(algoritmeType){
             case ZNAV: algoritmeType = algoritmeType;
             break;
@@ -56,6 +59,7 @@ public class Manager {
 
         }
 
+>>>>>>> a5ddbab8089bc9b565e87ec19a7238c4cfa90356
 
     }
 

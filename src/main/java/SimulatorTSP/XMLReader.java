@@ -20,12 +20,11 @@ package simulatorTSP;
 
 public class XMLReader {
 
-    private DocumentBuilderFactory docBuilderFactory ;
     private DocumentBuilder docBuilder;
 
     public XMLReader(){
 
-        docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         try {
             docBuilder = docBuilderFactory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {

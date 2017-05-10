@@ -18,7 +18,7 @@ public class _2Opt extends Algoritme{
             }
 
             order.remove(product);
-
+//
         }
         return route;
     }

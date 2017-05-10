@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+    <order>
+        <product>
+            <hoogte>6</hoogte>
+            <Xcoord>3</Xcoord>
+            <Ycoord>4</Ycoord>
+        </product>
+        <product>
+            <hoogte>4</hoogte>
+            <Xcoord>2</Xcoord>
+            <Ycoord>8</Ycoord>
+        </product>
+        <product>
+            <hoogte>1</hoogte>
+            <Xcoord>3</Xcoord>
+            <Ycoord>2</Ycoord>
+        </product>
+        <product>
+            <hoogte>3</hoogte>
+            <Xcoord>6</Xcoord>
+            <Ycoord>8</Ycoord>
+        </product>
+    </order>
+</orders>

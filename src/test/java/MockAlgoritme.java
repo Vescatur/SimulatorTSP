@@ -1,6 +1,6 @@
-import SimulatorTSP.Algoritmes.Algoritme;
-import SimulatorTSP.Locatie;
-import SimulatorTSP.Product;
+import simulatorTSP.algoritmes.Algoritme;
+import simulatorTSP.Locatie;
+import simulatorTSP.Product;
 
 import java.util.ArrayList;
 

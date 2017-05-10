@@ -1,7 +1,4 @@
-package SimulatorTSP;
-
-import SimulatorTSP.Algoritmes.Algoritme;
-import SimulatorTSP.Algoritmes.AlgoritmeGreedy;
+package simulatorTSP;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -17,7 +17,6 @@ public class _2Opt extends Algoritme{
             route.add(product);
             //while (/*kruising*/) {
             //route.add(/*zonderkruising*/);
-
             //}
 
             order.remove(product);

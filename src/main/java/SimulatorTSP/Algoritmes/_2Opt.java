@@ -13,13 +13,15 @@ public class _2Opt extends Algoritme{
     public ArrayList<Product> BerekenRoute(ArrayList<Product> order) {
         ArrayList<Product> route = new ArrayList<Product>();
 
-        for(Product product:order) {
+        for(Product product: order) {
             route.add(product);
             //while (/*kruising*/) {
-                                //route.add(/*zonderkruising*/);
-                
+            //route.add(/*zonderkruising*/);
+
             //}
+
             order.remove(product);
+
         }
         return route;
     }

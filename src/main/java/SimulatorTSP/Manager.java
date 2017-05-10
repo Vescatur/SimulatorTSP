@@ -61,8 +61,8 @@ public class Manager {
                 AlgoritmeRandom2Opt algoritmeRandom2Opt = new AlgoritmeRandom2Opt();
                 simulatorManager.setAlgoritme(algoritmeRandom2Opt);
             break;
-
         }
+        simulatorManager.setAlgoritmeType(algoritmeType);
     }
 
     public void berekenStop(){

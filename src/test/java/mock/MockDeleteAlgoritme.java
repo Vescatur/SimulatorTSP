@@ -1,3 +1,5 @@
+package mock;
+
 import simulatorTSP.algoritmes.Algoritme;
 import simulatorTSP.Product;
 

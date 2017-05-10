@@ -1,3 +1,8 @@
+package test;
+
+import mock.MockAlgoritme;
+import mock.MockDeleteAlgoritme;
+import mock.MockKopieAlgoritme;
 import simulatorTSP.algoritmes.Algoritme;
 import simulatorTSP.Locatie;
 import simulatorTSP.Product;
@@ -36,7 +41,7 @@ public class TestAlgoritme {
         ArrayList<Product> order = new ArrayList<Product>();
         order.add(new Product("doos", new Locatie(1,2),1));
         order.add(new Product("doos", new Locatie(1,2),1));
-        ArrayList<Product> route = algoritme.BerekenStart(order);
+        algoritme.BerekenStart(order);
 
         double expected = 2;
         double actual = order.size();

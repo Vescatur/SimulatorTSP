@@ -1,3 +1,6 @@
+package test;
+
+import mock.MockSimulatorManager;
 import simulatorTSP.Locatie;
 import simulatorTSP.Manager;
 import simulatorTSP.Product;
@@ -7,7 +10,6 @@ import org.junit.Test;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * Created by Ivan on 09/05/2017.

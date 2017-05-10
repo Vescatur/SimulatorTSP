@@ -1,3 +1,5 @@
+package test;
+
 import simulatorTSP.Locatie;
 import org.junit.Assert;
 import org.junit.Before;

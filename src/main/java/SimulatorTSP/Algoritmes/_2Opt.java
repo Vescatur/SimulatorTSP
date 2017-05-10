@@ -12,14 +12,16 @@ public class _2Opt extends Algoritme{
 
     public ArrayList<Product> BerekenRoute(ArrayList<Product> order) {
         ArrayList<Product> route = new ArrayList<Product>();
+        //lengte van array
+        int grootte = route.size();
+        //verbeter
+        int verbeter = 0;
 
-        for(Product product: order) {
-            product.getHoogte();
-            }
 
-            order.remove(product);
-//
+
+
+        return null;
         }
-        return route;
+
     }
-}
+

@@ -17,16 +17,11 @@ import java.util.ArrayList;
  */
 public class TestAlgoritme {
 
-    Algoritme algoritme;
 
-    @Before
-    public void Initialize(){
-
-    }
 
     @Test
     public void ControleerOrder_Empty(){
-        algoritme = new MockAlgoritme();
+        Algoritme algoritme = new MockAlgoritme();
         ArrayList<Product> order = new ArrayList<Product>(new ArrayList<Product>());
         ArrayList<Product> route = algoritme.BerekenStart(order);
 
@@ -37,7 +32,7 @@ public class TestAlgoritme {
 
     @Test
     public void CloneOrder_VerwijderProducten(){
-        algoritme = new MockDeleteAlgoritme();
+        Algoritme algoritme = new MockDeleteAlgoritme();
         ArrayList<Product> order = new ArrayList<Product>();
         order.add(new Product("doos", new Locatie(1,2),1));
         order.add(new Product("doos", new Locatie(1,2),1));
@@ -50,7 +45,7 @@ public class TestAlgoritme {
 
     @Test
     public void CloneOrder_IDcontrolerenProducten1(){
-        algoritme = new MockKopieAlgoritme();
+        Algoritme algoritme = new MockKopieAlgoritme();
         ArrayList<Product> order = new ArrayList<Product>();
         order.add(new Product("doos", new Locatie(1,2),1));
         order.add(new Product("doos", new Locatie(1,2),1));
@@ -67,7 +62,7 @@ public class TestAlgoritme {
 
     @Test
     public void CloneOrder_IDcontrolerenProducten2(){
-        algoritme = new MockKopieAlgoritme();
+        Algoritme algoritme = new MockKopieAlgoritme();
         ArrayList<Product> order = new ArrayList<Product>();
         order.add(new Product("doos", new Locatie(1,2),1));
         order.add(new Product("doos", new Locatie(1,2),1));

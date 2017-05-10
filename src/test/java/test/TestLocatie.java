@@ -10,8 +10,8 @@ import org.junit.Test;
  * Created by Ivan on 04/05/2017.
  */
 public class TestLocatie {
-    Locatie loc1;
-    Locatie loc2;
+    private Locatie loc1;
+    private Locatie loc2;
 
     @Before
     public void Initalize(){

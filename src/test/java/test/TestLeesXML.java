@@ -15,8 +15,8 @@ import java.util.ArrayList;
  * Created by Ivan on 09/05/2017.
  */
 public class TestLeesXML {
-    MockSimulatorManager simulatorManager;
-    Manager manager;
+    private MockSimulatorManager simulatorManager;
+    private Manager manager;
 
     @Before
     public void initialize(){
@@ -26,7 +26,7 @@ public class TestLeesXML {
 
     @Test
     public void LeesXML_EenProduct(){
-        File file = new File("src/test/java/MockOrderEenProduct.xml");
+        File file = new File("src/test/java/mock/MockOrderEenProduct.xml");
         manager.LeesXmlOrder(file);
 
         ArrayList<ArrayList<Product>> actual = simulatorManager.getOrder();
@@ -41,7 +41,7 @@ public class TestLeesXML {
 
     @Test
     public void LeesXML_EenOrder(){
-        File file = new File("src/test/java/MockOrderEenOrder.xml");
+        File file = new File("src/test/java/mock/MockOrderEenOrder.xml");
         manager.LeesXmlOrder(file);
         ArrayList<ArrayList<Product>> actual = simulatorManager.getOrder();
 
@@ -58,7 +58,7 @@ public class TestLeesXML {
 
     @Test
     public void LeesXML_MeerdereOrder(){
-        File file = new File("src/test/java/MockOrderMeerdereOrder.xml");
+        File file = new File("src/test/java/mock/MockOrderMeerdereOrder.xml");
         manager.LeesXmlOrder(file);
         ArrayList<ArrayList<Product>> actual = simulatorManager.getOrder();
 

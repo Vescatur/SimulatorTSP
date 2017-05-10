@@ -14,8 +14,8 @@ import java.util.ArrayList;
  * Created by Ivan on 08/05/2017.
  */
 public class TestGreedyAlgoritme {
-    Algoritme algoritme;
-    ArrayList<Product> order;
+    private Algoritme algoritme;
+    private ArrayList<Product> order;
 
     @Before
     public void Initialize(){

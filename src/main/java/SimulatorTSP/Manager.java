@@ -45,22 +45,21 @@ public class Manager {
             case ZNAV:
                 AlgoritmeZNav algoritmeZNav = new AlgoritmeZNav();
                 simulatorManager.setAlgoritme(algoritmeZNav);
-            break;
-
+                break;
             case GREEDY:
                 AlgoritmeGreedy algoritmeGreedy = new AlgoritmeGreedy();
                 simulatorManager.setAlgoritme(algoritmeGreedy);
-            break;
-
+                break;
             case BRUTEFORCE:
                 AlgoritmeBruteForce algoritmeBruteForce = new AlgoritmeBruteForce();
                 simulatorManager.setAlgoritme(algoritmeBruteForce);
-            break;
-
+                break;
             case RANDOM2OPT:
                 AlgoritmeRandom2Opt algoritmeRandom2Opt = new AlgoritmeRandom2Opt();
                 simulatorManager.setAlgoritme(algoritmeRandom2Opt);
-            break;
+                break;
+            default:
+                break;
         }
         simulatorManager.setAlgoritmeType(algoritmeType);
     }

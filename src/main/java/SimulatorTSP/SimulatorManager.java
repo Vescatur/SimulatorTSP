@@ -16,9 +16,7 @@ public class SimulatorManager {
     private boolean stoppen = false;
 
     //CONSTRUCTOR
-    public SimulatorManager(){
 
-    }
 
     //FUNCTIES
     public void setAlgoritme(Algoritme algoritme){

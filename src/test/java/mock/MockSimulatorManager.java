@@ -1,3 +1,5 @@
+package mock;
+
 import simulatorTSP.Product;
 import simulatorTSP.SimulatorManager;
 

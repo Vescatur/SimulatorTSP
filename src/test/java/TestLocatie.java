@@ -1,4 +1,4 @@
-import SimulatorTSP.Locatie;
+import simulatorTSP.Locatie;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

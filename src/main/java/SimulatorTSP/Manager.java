@@ -1,11 +1,9 @@
-package SimulatorTSP;
+package simulatorTSP;
 
-import SimulatorTSP.Algoritmes.*;
+import simulatorTSP.algoritmes.*;
 
 import java.io.File;
-import javax.xml.parsers.*;
 
-import org.w3c.dom.*;
 import java.util.ArrayList;
 
 /**

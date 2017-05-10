@@ -1,4 +1,4 @@
-package SimulatorTSP;
+package simulatorTSP;
 
 /**
  * Created by Ivan on 09/05/2017.
@@ -7,7 +7,6 @@ package SimulatorTSP;
         import java.io.File;
         import java.util.ArrayList;
 
-        import com.sun.org.apache.xpath.internal.operations.Or;
         import org.w3c.dom.Document;
         import org.w3c.dom.*;
 

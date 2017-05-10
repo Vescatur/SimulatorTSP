@@ -1,8 +1,7 @@
-package SimulatorTSP;
+package simulatorTSP;
 
-import SimulatorTSP.Algoritmes.Algoritme;
+import simulatorTSP.algoritmes.Algoritme;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -13,7 +12,7 @@ public class SimulatorManager {
     //VERIABLEN
     private Algoritme algoritme;
     private AlgoritmeType algoritmeType;
-    private ArrayList<ArrayList<Product>> orderArray;
+    protected ArrayList<ArrayList<Product>> orderArray;
     private boolean stoppen = false;
 
     //CONSTRUCTOR

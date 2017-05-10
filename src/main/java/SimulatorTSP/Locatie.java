@@ -1,4 +1,4 @@
-package SimulatorTSP;
+package simulatorTSP;
 
 
 /**

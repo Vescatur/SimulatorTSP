@@ -1,8 +1,7 @@
-import SimulatorTSP.Algoritmes.Algoritme;
-import SimulatorTSP.Algoritmes.AlgoritmeGreedy;
-import SimulatorTSP.Algoritmes._2Opt;
-import SimulatorTSP.Locatie;
-import SimulatorTSP.Product;
+import simulatorTSP.algoritmes.Algoritme;
+import simulatorTSP.algoritmes._2Opt;
+import simulatorTSP.Locatie;
+import simulatorTSP.Product;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

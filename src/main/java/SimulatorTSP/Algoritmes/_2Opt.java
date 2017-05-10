@@ -1,7 +1,6 @@
-package SimulatorTSP.Algoritmes;
+package simulatorTSP.algoritmes;
 
-import SimulatorTSP.Locatie;
-import SimulatorTSP.Product;
+import simulatorTSP.Product;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,4 @@
-package SimulatorTSP;
-
-import SimulatorTSP.Algoritmes.Algoritme;
+package simulatorTSP;
 
 /**
  * Created by Ivan on 03/05/2017.

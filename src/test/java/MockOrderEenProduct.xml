@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+    <order>
+        <product>
+            <hoogte>6</hoogte>
+            <Xcoord>3</Xcoord>
+            <Ycoord>4</Ycoord>
+        </product>
+    </order>
+</orders>

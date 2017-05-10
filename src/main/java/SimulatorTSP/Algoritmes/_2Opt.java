@@ -14,10 +14,8 @@ public class _2Opt extends Algoritme{
         ArrayList<Product> route = new ArrayList<Product>();
 
         for(Product product: order) {
-            route.add(product);
-            //while (/*kruising*/) {
-            //route.add(/*zonderkruising*/);
-            //}
+            product.getHoogte();
+            }
 
             order.remove(product);
 

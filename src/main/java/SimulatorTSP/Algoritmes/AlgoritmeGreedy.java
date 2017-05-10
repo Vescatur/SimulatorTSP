@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by Ivan on 04/05/2017.
  */
-public class AlgoritmeGreedy extends Algoritme {
+public class AlgoritmeGreedy extends simulatorTSP.algoritmes.Algoritme {
     protected ArrayList<Product> BerekenRoute(ArrayList<Product> order) {
         ArrayList<Product> route = new ArrayList<Product>();
 

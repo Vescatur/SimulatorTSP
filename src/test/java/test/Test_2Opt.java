@@ -1,3 +1,5 @@
+package test;
+
 import simulatorTSP.algoritmes.Algoritme;
 import simulatorTSP.algoritmes._2Opt;
 import simulatorTSP.Locatie;

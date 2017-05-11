@@ -11,9 +11,8 @@ import java.util.stream.*;
  * Created by Ivan on 04/05/2017.
  */
 public class _2Opt extends Algoritme{
-//bron: http://www.technical-recipes.com/2012/applying-c-implementations-of-2-opt-to-travelling-salesman-problems/
 
-    public ArrayList<Product> BerekenRoute(ArrayList<Product> order) {
+    public double berekenTotaleAfstand(ArrayList<Product> order){
         //bewaarde productlocaties
         ArrayList<Locatie> productlocaties = new ArrayList<Locatie>();
 
@@ -33,34 +32,41 @@ public class _2Opt extends Algoritme{
 
         double totaleAfstand = 0;
 
+        //voeg afstanden aan totaleAfstand toe
         for(double x : lengtes){
             totaleAfstand += x;
         }
 
+        return totaleAfstand;
+    }
+
+    public ArrayList<Product> BerekenRoute(ArrayList<Product> order) {
+        //bron: http://www.technical-recipes.com/2012/applying-c-implementations-of-2-opt-to-travelling-salesman-problems/
+        _2Opt _2opt = new _2Opt();
+
+        int grootte = order.size();
+
         int verbeter = 0;
 
-        while(verbeter < 20){
+        while (verbeter < 20) {
+            double besteAfstand = berekenTotaleAfstand(order);
+                for (int i = 0; i < grootte - 1; i++) {
+                    for (int k = i + 1; k < grootte; k++) ;
 
-            double besteAfstand = totaleAfstand;
+                    //nieuwe_route = verwissel2Opt(order, i, k);
 
-            for(int i = 0; i < totaleAfstand-1; i++){
-                for(int k = i + 1; k < totaleAfstand; k++){
+                    double nieuweAfstand = berekenTotaleAfstand(order);
 
-                    wissel2Opt(i, k);
-
-                    double nieuweAfstand = totaleAfstand;
-
-                    //if()
+                    if (nieuweAfstand < besteAfstand) {
+                        verbeter = 0;
+                        //bestaande route = nieuwe route
+                        nieuweAfstand = besteAfstand;
+                    }
                 }
-            }
+                return null;
         }
-
         return null;
-        }
-
-    public void wissel2Opt(int i, int k){
-
     }
 
-    }
+}
 

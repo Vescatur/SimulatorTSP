@@ -12,22 +12,13 @@ import java.util.stream.*;
  */
 public class _2Opt extends Algoritme{
 
-    public double berekenTotaleAfstand(ArrayList<Product> order){
-        //bewaarde productlocaties
-        ArrayList<Locatie> productlocaties = new ArrayList<Locatie>();
-
+    public double berekenTotaleAfstand(ArrayList<Locatie> order){
         //bewaarde lengtes van afstanden
         List<Double> lengtes = new ArrayList<Double>();
 
-        //stop productlocaties in array
-        for(Product product:order){
-            Locatie locatie = product.getLocatie();
-            productlocaties.add(locatie);
-        }
-
         //krijg lengtes van afstanden tussen locaties
-        for (int x = 1; x < productlocaties.size(); x++) {
-            lengtes.add((productlocaties.get(x).getLengte(productlocaties.get(x - 1))));
+        for (int x = 1; x < order.size(); x++) {
+            lengtes.add((order.get(x).getLengte(order.get(x - 1))));
         }
 
         double totaleAfstand = 0;
@@ -42,30 +33,74 @@ public class _2Opt extends Algoritme{
 
     public ArrayList<Product> BerekenRoute(ArrayList<Product> order) {
         //bron: http://www.technical-recipes.com/2012/applying-c-implementations-of-2-opt-to-travelling-salesman-problems/
-        _2Opt _2opt = new _2Opt();
+        ArrayList<Locatie> route = new ArrayList<Locatie>();
+        for(Product p : order){
+            Locatie locatie = p.getLocatie();
+            route.add(locatie);
+        }
+        System.out.println("Locatie arraylist gemaakt");
+        System.out.println(route.toString());
 
         int grootte = order.size();
 
         int verbeter = 0;
 
-        while (verbeter < 20) {
-            double besteAfstand = berekenTotaleAfstand(order);
-                for (int i = 0; i < grootte - 1; i++) {
-                    for (int k = i + 1; k < grootte; k++) ;
+        while (verbeter < 3) {
+            double besteAfstand = berekenTotaleAfstand(route);
+            for (int i = 0; i < grootte - 1; i++) {
+                for (int k = i + 1; k < grootte; k++) {
 
-                    //nieuwe_route = verwissel2Opt(order, i, k);
+                    ArrayList<Locatie> nieuwe_route = new ArrayList<Locatie>();
+                    System.out.println("Nieuwe route array List aangemaakt");
+                    nieuwe_route = verwissel2Opt(route, i, k);
+                    System.out.println("2opt route aangemaakt");
 
-                    double nieuweAfstand = berekenTotaleAfstand(order);
+
+                    double nieuweAfstand = berekenTotaleAfstand(nieuwe_route);
+                    System.out.println("Afstand van 2opt berekent");
 
                     if (nieuweAfstand < besteAfstand) {
                         verbeter = 0;
-                        //bestaande route = nieuwe route
-                        nieuweAfstand = besteAfstand;
+                        besteAfstand = nieuweAfstand;
+                        System.out.println("\nVERBETERING\n");
+                        System.out.println(nieuwe_route.toString());
                     }
                 }
-                return null;
+            }
+            System.out.println("Opnieuw checken\n");
+            verbeter++;
         }
         return null;
+    }
+
+    public ArrayList<Locatie> verwissel2Opt(ArrayList<Locatie> route, final int i, final int k){
+        int size = route.size();
+        ArrayList<Locatie> nieuwe_route = new ArrayList<Locatie>();
+
+        boolean done = false;
+
+        if(!done) {
+            for (int c = 0; c <= i - 1; ++c) {
+                Locatie locatie = route.get(c);
+                nieuwe_route.add(locatie);
+            }
+            System.out.println("Stap 1 uitgevoerd");
+
+            for (int c = k; c >= i; --c) {
+                Locatie locatie = route.get(c);
+                nieuwe_route.add(locatie);
+            }
+            System.out.println("Stap 2 uitgevoerd");
+
+            for (int c = k + 1; c < size; ++c) {
+                Locatie locatie = route.get(c);
+                nieuwe_route.add(locatie);
+            }
+            System.out.println("Stap 3 uitgevoerd");
+            done = true;
+        }
+        System.out.println("2opt uitgevoerd\n");
+        return nieuwe_route;
     }
 
 }

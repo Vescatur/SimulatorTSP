@@ -51,19 +51,31 @@ public class _2Opt extends Algoritme{
         while (verbeter < 20) {
             double besteAfstand = berekenTotaleAfstand(order);
                 for (int i = 0; i < grootte - 1; i++) {
-                    for (int k = i + 1; k < grootte; k++) ;
+                    for (int k = i + 1; k < grootte; k++) {
 
-                    //nieuwe_route = verwissel2Opt(order, i, k);
+                        //verwissel2Opt;
 
-                    double nieuweAfstand = berekenTotaleAfstand(order);
 
-                    if (nieuweAfstand < besteAfstand) {
-                        verbeter = 0;
-                        //bestaande route = nieuwe route
-                        nieuweAfstand = besteAfstand;
+                        double nieuweAfstand = berekenTotaleAfstand(order);
+
+                        if (nieuweAfstand < besteAfstand) {
+                            verbeter = 0;
+                            //bestaande route = nieuwe route
+                            nieuweAfstand = besteAfstand;
+                        }
                     }
                 }
-                return null;
+                verbeter++;
+        }
+        return null;
+    }
+
+    public ArrayList<Locatie> verwissel2Opt(ArrayList<Locatie> route, final int i, final int k){
+        int size = route.size();
+        ArrayList<Locatie> nieuwe_route = new ArrayList<Locatie>();
+
+        for (int c = 0; c <= i - 1; ++c){
+
         }
         return null;
     }

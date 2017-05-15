@@ -14,6 +14,7 @@ public class AlgoritmeBruteForce extends Algoritme {
         for(int i = 1; i<route.length;i++){
             lengte += lengteTable[route[i-1]][route[i]];
         }
+        lengte += lengteTable[route[route.length-1]][route[0]];
         return lengte;
 
     }

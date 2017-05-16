@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by Ivan on 04/05/2017.
  */
 public class AlgoritmeBruteForce extends Algoritme {
-
+    int counter = 0;
     public double getLengte(double[][] lengteTable,int[] route){
         double lengte = 0;
         for(int i = 1; i<route.length;i++){
@@ -28,7 +28,10 @@ public class AlgoritmeBruteForce extends Algoritme {
     }
 
     public int[] BerekenStap(double[][] lengteTable,int[] route,int stap){
+
         if(stap < route.length-1) {
+            System.out.println(counter++);
+
             int[] bestRoute = route;
             double bestLengte = 100000;
             for (int i = 0; i < route.length; i++) {

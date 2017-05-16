@@ -42,13 +42,14 @@ public class _2Opt extends Algoritme{
         System.out.println(route.toString());
 
         int grootte = order.size();
-
+        int counter = 0;
         int verbeter = 0;
 
-        while (verbeter < 3) {
+        while (verbeter < 7) {
             double besteAfstand = berekenTotaleAfstand(route);
             for (int i = 0; i < grootte - 1; i++) {
                 for (int k = i + 1; k < grootte; k++) {
+                    System.out.println(counter++);
 
                     ArrayList<Locatie> nieuwe_route = new ArrayList<Locatie>();
                     System.out.println("Nieuwe route array List aangemaakt");
@@ -67,7 +68,7 @@ public class _2Opt extends Algoritme{
                     }
                 }
             }
-            System.out.println("Opnieuw checken\n");
+            System.out.println("Klaar\n");
             verbeter++;
         }
         return null;

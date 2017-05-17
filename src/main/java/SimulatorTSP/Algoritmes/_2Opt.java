@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.*;
 
-public class _2Opt extends Algoritme {
 
+public class _2Opt extends Algoritme{
 
     public double berekenTotaleAfstand(ArrayList<Locatie> order){
         //bewaarde lengtes van afstanden
@@ -31,82 +31,72 @@ public class _2Opt extends Algoritme {
 
     public ArrayList<Product> BerekenRoute(ArrayList<Product> order) {
         //bron: http://www.technical-recipes.com/2012/applying-c-implementations-of-2-opt-to-travelling-salesman-problems/
-        //snelste productroute
-        ArrayList<Product> productroute = new ArrayList<Product>();
-
-        ArrayList<Locatie> nieuwe_route = new ArrayList<Locatie>();
-
-        //locaties van huidige route
         ArrayList<Locatie> route = new ArrayList<Locatie>();
         for(Product p : order){
             Locatie locatie = p.getLocatie();
             route.add(locatie);
         }
+        System.out.println("Locatie arraylist gemaakt");
+        System.out.println(route.toString());
+        ArrayList<Locatie> beste_route = new ArrayList<Locatie>();
 
-        int grootte = order.size();
-        int counter = 0;
-        int verbeter = 0;
+        // Get tour size
+        double size = order.size();
 
-        while (verbeter < 5) {
+        // repeat until no improvement is made
+        int improve = 0;
+
+        while (improve < 5) {
             double besteAfstand = berekenTotaleAfstand(route);
-            besteAfstand = (int) Math.round(besteAfstand);
-            for (int i = 0; i < grootte - 1; i++) {
-                for (int k = i + 1; k < grootte; k++) {
-                    System.out.println(counter++);
 
-                    //ArrayList<Locatie> nieuwe_route = new ArrayList<Locatie>();
-                    nieuwe_route = verwissel2Opt(route, i, k);
+            for ( int i = 0; i < size - 1; i++ )
+            {
+                for ( int k = i + 1; k < size; k++)
+                {
+                    ArrayList<Locatie> nieuwe_route = new ArrayList<Locatie>();
 
-                    double nieuweAfstand = berekenTotaleAfstand(nieuwe_route);
-                    nieuweAfstand = (int) Math.round(nieuweAfstand);
+                    nieuwe_route = verwissel2Opt(route, i, k );
 
-                    if (nieuweAfstand < besteAfstand) {
-                        besteAfstand = nieuweAfstand;
 
-                    } else if (nieuweAfstand == besteAfstand) {
-                        break;
+                    ArrayList<Locatie> new_distance_route = nieuwe_route;
+                    double new_distance = berekenTotaleAfstand(new_distance_route);
+
+                    if ( new_distance < besteAfstand )
+                    {
+                        // Improvement found so reset
+                        improve = 0;
+                        route = nieuwe_route;
+                        besteAfstand = new_distance;
+                        System.out.println("\nVERBETERING\n");
+                        System.out.println(berekenTotaleAfstand(nieuwe_route));
+                        System.out.println(nieuwe_route.toString());
+                    } else {
+                        System.out.println("Geen verbetering!\n");
                     }
                 }
             }
-            verbeter++;
+            improve ++;
         }
-        for(Locatie l: nieuwe_route){
-            for(Product p: order){
-                if(l == p.getLocatie()){
-                    productroute.add(p);
-                }
-            }
-        }
-        return productroute;
+        return null;
     }
 
-    public ArrayList<Locatie> verwissel2Opt(ArrayList<Locatie> route, final int i, final int k){
+    private ArrayList<Locatie> verwissel2Opt(ArrayList<Locatie> route, final int i, final int k){
         int size = route.size();
         ArrayList<Locatie> nieuwe_route = new ArrayList<Locatie>();
 
-        boolean done = false;
-
-        if(!done) {
-            for (int c = 0; c <= i - 1; ++c) {
-                Locatie locatie = route.get(c);
-                nieuwe_route.add(locatie);
-            }
-
-
-            for (int c = k; c >= i; --c) {
-                Locatie locatie = route.get(c);
-                nieuwe_route.add(locatie);
-            }
-
-
-            for (int c = k + 1; c < size; ++c) {
-                Locatie locatie = route.get(c);
-                nieuwe_route.add(locatie);
-            }
-
-            done = true;
+        for (int c = 0; c <= i - 1; c++) {
+            Locatie locatie = route.get(c);
+            nieuwe_route.add(locatie);
         }
-
+        for (int c = k; c >= i; c--) {
+            Locatie locatie = route.get(c);
+            nieuwe_route.add(locatie);
+        }
+        for (int c = k + 1; c < size; c++) {
+            Locatie locatie = route.get(c);
+            nieuwe_route.add(locatie);
+        }
+        System.out.println("2opt uitgevoerd");
         return nieuwe_route;
     }
 

@@ -46,15 +46,17 @@ public class RouteBerekening {
         return score;
     }
 
-    public void setLengteRoute(ArrayList<Product> producten) {
+    private void CalculateLengteRoute() {
         ArrayList<Locatie> locaties = new ArrayList<Locatie>();
-        for (Product product : producten) {
+        lengteRoute = 0;
+        for (Product product : order) {
             Locatie locatie = product.getLocatie();
             locaties.add(locatie);
         }
         for (int x = 1; x < locaties.size(); x++) {
             lengteRoute = lengteRoute + locaties.get(x).getLengte(locaties.get(x - 1));
         }
+        lengteRoute += locaties.get(order.size()).getLengte(locaties.get(0));
     }
 
 }

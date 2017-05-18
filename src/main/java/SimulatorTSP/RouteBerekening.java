@@ -18,7 +18,7 @@ public class RouteBerekening {
         this.algoritmeType = algoritmeType;
         this.route = route;
         this.berekenTijd = berekenTijd;
-        this.lengteRoute = 0;//nog uitzoeken
+        this.lengteRoute = CalculateLengteRoute();//nog uitzoeken
         this.score = (lengteRoute / berekenTijd);
     }
 
@@ -46,17 +46,18 @@ public class RouteBerekening {
         return score;
     }
 
-    private void CalculateLengteRoute() {
+    private double CalculateLengteRoute() {
         ArrayList<Locatie> locaties = new ArrayList<Locatie>();
-        lengteRoute = 0;
+        double lengteRouteTemp = 0;
         for (Product product : order) {
             Locatie locatie = product.getLocatie();
             locaties.add(locatie);
         }
         for (int x = 1; x < locaties.size(); x++) {
-            lengteRoute = lengteRoute + locaties.get(x).getLengte(locaties.get(x - 1));
+            lengteRouteTemp = lengteRouteTemp + locaties.get(x).getLengte(locaties.get(x - 1));
         }
         lengteRoute += locaties.get(order.size()).getLengte(locaties.get(0));
+        return lengteRouteTemp;
     }
 
 }

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 /**
  * Created by Ivan on 08/05/2017.
  */
+@SuppressWarnings("Duplicates")
 public class TestGreedyAlgoritme {
     private Algoritme algoritme;
     private ArrayList<Product> order;
